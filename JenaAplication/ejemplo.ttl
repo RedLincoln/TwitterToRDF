@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dc11: <http://purl.org/dc/elements/1.1/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#>.
+@prefix si2: <http://www.si2.com/si/>.
+
+si2:libro1
+	dc11:title "Cien años de soledad";
+	dc11:date "1967";
+	dc11:creator si2:marquez .
+	
+si2:libro2
+	dc11:title "El otoño del patriarca";
+	dc11:date "1975";
+	dc11:creator si2:marquez .
+
+si2:libro3
+	dc11:title "El coronel no tiene quien le escriba";
+	dc11:date "1961";
+	dc11:creator si2:marquez .
+
+si2:libro4
+	dc11:title "Crepúsculo";
+	dc11:date "2005";
+	dc11:creator si2:meyer .
+
+si2:libro5
+	dc11:title "Luna Nueva";
+	dc11:date "2006";
+	dc11:creator si2:meyer .
+
+si2:libro6
+	dc11:title "Eclipse";
+	dc11:date "2007";
+	dc11:creator si2:meyer .
+	
+si2:marquez
+	vcard:fn "Gabriel García Márquez";
+	vcard:bday "1927".
+	
+si2:meyer
+	vcard:fn "Stephanie Meyer";
+	vcard:bday "1973".
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	

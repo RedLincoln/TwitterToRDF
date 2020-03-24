@@ -1,0 +1,13 @@
+twitter4j.properties
+JenaAplication/apache-jena-3.14.0/
+JenaAplication/twitter4j/
+
+
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
