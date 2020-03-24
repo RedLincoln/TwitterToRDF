@@ -188,7 +188,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_searchButtonActionPerformed
     
     private void search(){
-        if (!fieldsAreEmpty()){
+        if (fieldsAreEmpty()){
             JOptionPane.showMessageDialog(this, "Los campos de tema y Patron deben de estar rellenos", "Adverterncia", JOptionPane.WARNING_MESSAGE);
             return ;
         }
@@ -211,8 +211,8 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     private boolean fieldsAreEmpty(){
-        return searchStringField.getText().trim().length() > 0 && 
-               themeField.getText().trim().length() > 0;
+        return searchStringField.getText().trim().length() == 0 || 
+               themeField.getText().trim().length() == 0;
     }
     
     private void save(RDFManager manager){
