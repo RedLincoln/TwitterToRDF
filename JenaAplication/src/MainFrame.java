@@ -55,6 +55,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel1.setText("Cantidad de muestras");
 
+        searchStringField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchStringFieldActionPerformed(evt);
+            }
+        });
         searchStringField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 searchStringFieldKeyPressed(evt);
@@ -94,6 +99,12 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel3.setText("Patron");
 
         jLabel4.setText("Tema");
+
+        themeField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                themeFieldActionPerformed(evt);
+            }
+        });
 
         ayudaMenu.setText("Ayuda");
 
@@ -169,10 +180,14 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchStringFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_searchStringFieldKeyPressed
-
+        
     }//GEN-LAST:event_searchStringFieldKeyPressed
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        search();
+    }//GEN-LAST:event_searchButtonActionPerformed
+    
+    private void search(){
         if (!fieldsAreEmpty()){
             JOptionPane.showMessageDialog(this, "Los campos de tema y Patron deben de estar rellenos", "Adverterncia", JOptionPane.WARNING_MESSAGE);
             return ;
@@ -193,8 +208,7 @@ public class MainFrame extends javax.swing.JFrame {
         }catch(TwitterException e){
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, e);
         }
-        
-    }//GEN-LAST:event_searchButtonActionPerformed
+    }
     
     private boolean fieldsAreEmpty(){
         return searchStringField.getText().trim().length() > 0 && 
@@ -239,6 +253,14 @@ public class MainFrame extends javax.swing.JFrame {
     private void turtleRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_turtleRadioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_turtleRadioActionPerformed
+
+    private void searchStringFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchStringFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchStringFieldActionPerformed
+
+    private void themeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themeFieldActionPerformed
+        search();
+    }//GEN-LAST:event_themeFieldActionPerformed
 
     
     public void save(File file,String res){
